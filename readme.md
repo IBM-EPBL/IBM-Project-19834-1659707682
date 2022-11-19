@@ -22,6 +22,6 @@ Students are often worried about their chances of admission to University. The a
 -The user will be able to add their profile information  
 -The user will be able to edit their profile information  
 -The user will be able to delete their profile  
--The user will be able to predict their chance of admission 
+-The user will be able to predict their chance of admission
 -The predictor uses linear regression to predict the chances of admit
 
