@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+    div {text-align: center;}
+</style>
+<h4>Enter your details to predict chance of admission:::</h4>
+<div>
+    <form action="{{ url_for('predict')}}" method="post">
+        <div>
+            <label for="gre_score">GRE:</label>
+            <input type="text" id="gre_score" name="gre" placeholder="gre_score">
+        </div>
+        <br>
+        <div>
+            <label for="toefl_score">TOEFL:</label>
+            <input type="text" id="toefl_score" name="toefl" placeholder="toefl_score">
+        </div>
+        <br>
+        <div>
+            <label for="university_rating">RATING:</label>
+            <input type="text" id="university_rating" name="rating" placeholder="university_tating">
+        </div>
+        <br>
+        <div>
+            <label for="sop_score">SOP:</label>
+            <input type="text" id="sop_score" name="sop" placeholder="sop_score">
+        </div>
+        <br>
+        <div>
+            <label for="lor_score">LOR:</label>
+            <input type="text" id="lor_score" name="lor" placeholder="lor_score">
+        </div>
+        <br>
+        <div>
+            <label for="cgpa_score">CGPA:</label>
+            <input type="text" id="cgpa_score" name="cgpa" placeholder="cgpa_score">
+        </div>
+        <br>
+        <div>
+            <label for="research_score">RESEARCH:</label>
+            <input type="text" id="research_score" name="research" placeholder="research_score">
+        </div>
+        <br>
+        <div>
+            <button type="submit">Enter</button>
+        </div>
+        <br>
+    </form>
+    <br>
+    <h4>{{ pred }}</h4>
+</div>
+{% endblock %}
