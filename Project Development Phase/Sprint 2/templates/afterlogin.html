@@ -1,0 +1,41 @@
+<style>
+    h3 {text-align: center;}
+    h5 {text-align: center;}
+    div {text-align: center;}
+    .flex-container{display: flex;justify-content: space-around}
+</style>
+<h3>Hello this is UAEP, where your LIVES are made SIMPLER!!!!</h3>
+<h5>If u are a new user, please add your profile using the Add Profile option...</h5>
+<h5>If u want to delete your profile please use delete profile option...</h3>
+<h5>If u are an exixting user and want to edit your profile, use the Edit Profile option...</h5>
+<h5>If u want to start with prediction process, use the Predict option...</h5>
+<br>
+<br>
+<div>
+    <a class="btn btn-primary" href="{{url_for('add_profile')}}" role="button">Add Profile</a>
+    <a class="btn btn-primary" href="{{url_for('predict')}}" role="button">Predict</a>   
+  </div>
+  <br>
+  <div class="flex-container">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        {% for collection in collections %}
+        <div class="card bg-warning" style="width: 18rem;" >
+          <div class="card-body">
+            <h5 class="card-title">Profile Information</h5><br>
+            <h6 class="card-subtitle mb-2 text-muted">Student Name: {{collection.name}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Place: {{collection.place}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Phone Number: {{collection.number}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Occupation: {{collection.occupation}}</h6>
+            <a href="{{url_for('edit_profile',student_id=collection.id)}}" class="card-link"> Edit Profile</a><br>
+            <a class="btn btn-danger" href="{{url_for('delete_deck',student_id=collection.id)}}" role="button">Delete</a>
+          </div>
+        </div>
+        <br>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div>
+
+

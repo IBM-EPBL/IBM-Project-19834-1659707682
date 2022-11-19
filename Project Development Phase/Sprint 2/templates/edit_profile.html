@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="col-xs-12 col-sm-4 col-lg-3">
+    <form method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(size=60, class="form-control", placeholder="Name") }}
+        </div>
+        <div class="form-group">
+            {{ form.place.label }}
+            {{ form.place(size=60, class="form-control", placeholder="Name") }}
+        </div>
+        <div class="form-group">
+            {{ form.number.label }}
+            {{ form.number(size=60, class="form-control", placeholder="Name") }}
+        </div>
+        <div class="form-group">
+            {{ form.occupation.label }}
+            {{ form.occupation(size=60, class="form-control", placeholder="Name") }}
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+{% endblock %}
