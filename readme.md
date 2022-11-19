@@ -15,6 +15,9 @@ Students are often worried about their chances of admission to University. The a
 
 <img src=images/techarch.png>
 
+### Project demo link :
+https://youtu.be/6sa_H0Jmewc
+
 ### Features:
 
 -The user will be able to register to the web app using an username, email and password  
