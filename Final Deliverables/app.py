@@ -5,12 +5,12 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import LoginManager, login_user, current_user, logout_user
 from forms import *
 import numpy as np
-import pickle
+#import pickle
 import json
 import requests
 
 app=Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+#model = pickle.load(open('model.pkl', 'rb'))
 app.secret_key='Secret key'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database2.sqlite3'
 db=SQLAlchemy()
